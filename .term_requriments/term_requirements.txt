@@ -1,0 +1,22 @@
+# all can be found on https://maxim-danilov.github.io/make-linux-terminal-great-again/
+# Terminal emulator instead of gnome for appereance, hotkeys, text search, and arraging terminals in grids
+apt install terminator
+
+# Supports Unicode chars in the termial
+apt install fonts-powerline
+
+# solarized color for terminal
+git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
+
+# Enable text autosuggetions with oh my zsh pluggins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Remove hostname from prompt
+
+# Syntax highlighting with oh my zsh plugin
+cd ~/.term_requirements/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+# Enable vim adding vi-mode to plugin list in oh my zsh
+
